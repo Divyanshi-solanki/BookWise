@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder & AI Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Book Finder <span class="accent">& AI Summarizer</span></h1>
+            <p>Discover books and get AI-powered insights in seconds.</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="book-title" placeholder="Enter book title (e.g. The Great Gatsby)" autocomplete="off">
+                <button id="search-btn">
+                    <span class="btn-text">Search</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </div>
+        </section>
+
+        <main id="results-container" class="hidden">
+            <div class="book-card glass">
+                <div class="book-header">
+                    <h2 id="res-title"></h2>
+                    <p id="res-authors" class="authors"></p>
+                </div>
+                
+                <div class="book-content">
+                    <div class="content-section">
+                        <h3>AI Summary</h3>
+                        <p id="res-summary" class="summary-text"></p>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h3>Original Description</h3>
+                        <p id="res-description" class="description-text"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="error-message" class="error-toast hidden"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
