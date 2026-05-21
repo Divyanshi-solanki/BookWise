@@ -1,4 +1,4 @@
-#BookWise - Book Finder & Summarizer 📚✨
+# BookWise - Book Finder & Summarizer 📚✨
 
 A full-stack web application that allows users to search for books by title, fetch detailed information using the Google Books API, and generate AI-powered summaries of book descriptions using the `facebook/bart-large-cnn` model.
 
